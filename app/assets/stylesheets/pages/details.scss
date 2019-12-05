@@ -1,0 +1,238 @@
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.btn-save {
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    z-index: 1;
+}
+.btn-preferences {
+  position: absolute;
+  bottom: -40px;
+  /* left: 40%; */
+  margin: auto;
+  z-index: 1;
+  width: 100%;
+}
+div#btn-preferences{
+ font-size: 1em;
+}
+.bg{
+  // background-color: #FAFCFE;
+  background-color: rgba(231, 229, 229, 0.05);
+}
+// .preferences{
+//   width: 70vh;
+// }
+h2.trip-header{
+  font-weight: 400;
+  color: white;
+  background-color: #707070;
+  font-family: 'Raleway', ‘Montserrat’, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 1.5em;
+  letter-spacing: 0.2em;
+  margin-bottom: 0;
+  //background-image: linear-gradient(rgba(255, 250, 229, 0.4), rgba(140, 140, 140, 0.4)), url("Map.png");
+}
+h3.trip-header, h3.trip-header-green{
+  font-weight: 400;
+  color: white;
+  background-color: #707070;
+  font-family: 'Raleway', ‘Montserrat’, sans-serif;
+  font-size: 20px;
+  padding: 0.5em;
+  letter-spacing: 0.2em;
+  border-radius: 5px 5px 0 0;
+}
+h3.trip-header-green{
+  background-color: #5AB794;
+}
+.btn{
+  color:white;
+  margin: 8px;
+  position: relative;
+}
+// .preferences{
+//   width: 70vw;
+//   margin: auto;
+// }
+.filter, {
+  width: 10vw;
+  // margin: 2em 0em;
+  // padding: 0.5em;
+  text-align: center;
+  // border-radius: 5px;
+  // border: 1px solid rgba(90, 183, 148, 0.3);
+  color: #81C9AD;
+  // color: rgba(69, 77, 102, 0.8);
+  font-size: 16px;
+  margin-bottom: 0;
+}
+ .filter > i {
+  margin-right: 0.5em;
+  font-size: 1.3em;
+  //color: rgba(69, 77, 102, 0.8);
+  background-color: #81C9AD;
+  color: white;
+  padding: 0.7em;
+  border-radius: 50%;
+
+ }
+.timeline-cities h2{
+  font-weight: 500;
+  // color: rgb(129, 201, 173);
+  color: #454D66;
+  font-family: 'Raleway', ‘Montserrat’, sans-serif;
+  font-size: 20px;
+}
+.timeline-cities{
+  margin: 0vw 9vw 0vw 9vw;
+}
+
+.timeline-container{
+  margin: 1vw 10vw 7vw 10vw;
+  position: relative;
+}
+.timeline {
+  background-color: #707070;
+  // background-color: rgb(129, 201, 173);
+
+  color: white;
+  border-radius: 50%;
+  padding: 0.5em 1em;
+  z-index: 40;
+  // margin: 10%;
+}
+p.timeline {
+  margin-bottom: 0;
+}
+.timeline-container > hr{
+  margin-left: -33px;
+  margin-right: -27px;
+  width: 50%;
+}
+.timeline-details{
+  background-color: #707070;
+  color: white;
+  border-radius: 50%;
+  padding: 0.5em 1em;
+  width: fit-content;
+}
+p.timeline-details{
+  color: white;
+  margin-right: 1em;
+}
+p.city-name {
+  font-weight: 500;
+  color: #454D66;
+  font-family: 'Raleway', ‘Montserrat’, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.3em;
+  padding: 0 1em;
+  }
+p.city-title{
+  font-weight: 500;
+  color: #454D66;
+  font-family: 'Raleway', ‘Montserrat’, sans-serif;
+  font-size: 18px;
+  padding: 0 1em;
+}
+.card-product p{
+  font-weight: 500;
+  color: #575F75;
+  font-family: 'Raleway', ‘Montserrat’, sans-serif;
+  font-size: 16px;
+  opacity: 1;
+}
+.card-product i{
+   margin-right: 0.3em;
+  font-weight: 600;
+}
+.car-icon {
+  color: rgba(69, 77, 102, 0.8);
+  // color: rgb(129, 201, 173);
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+.car-km{
+  margin-top: 60px;
+  font-family: 'Raleway', ‘Montserrat’, sans-serif;
+}
+.car-span-size{
+  width: 60px;
+  color: rgba(69, 77, 102, 0.8);
+  // color: rgb(129, 201, 173);
+
+}
+p.green{
+  color: #3fcf8e;
+}
+.map{
+  height: 90vh;
+  width: 45vw;
+  margin-top: 1em;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: sticky;
+  top: 70px;
+}
+.sticky-map-trip{
+  position: sticky;
+  top: 10px;
+}
+.sticky-top a {
+  margin: 6vh 3vh 0 0;
+}
+
+.list-activity{
+  width: 45%;
+  // height: 90vh;
+  background-color: white;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  // box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  // border: 1px solid rgba(69, 77, 102, 0.1);
+  border-radius: 15px;
+  padding: 25px 25px 25px 25px;
+}
+
+.list-activity > a{
+  color: #454D66;
+}
+.list-activity > a > .card-product:hover {
+  background-color: white;
+  opacity: inherit;
+  opacity: 0.6;
+}
+a:hover.details-links{
+  border: none;
+}
+// .list-activity h2{
+//   font-weight: 600;
+//   color: rgba(69, 77, 102, 0.8);;
+//   font-family: 'Raleway', ‘Montserrat’, sans-serif;
+//   font-size: 30px;
+// }
+// .steps{
+//   height: auto;
+//   width:auto;
+//   background-color:white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   margin:10px;
+//   padding:30px;
+//   border-radius: 8px;
+// }
+
+// .step-details{
+//   height:140px;
+//   width:auto;
+//   background-color: red;
+// }
+
+

@@ -1,0 +1,218 @@
+body{
+  background-color:white;
+}
+
+.container-home{
+  text-align:left;
+  position: absolute;
+  bottom: 370px;
+  left: 100px;
+
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  background-image: asset-url("homepage/banner.png");
+  padding: 284px 0;
+  height: 100vh;
+  margin-bottom: 79px;
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+  color: #6C5EBF;
+  font-family: Roboto;
+  letter-spacing: 2px;
+}
+
+.banner p {
+  font-size: 25px;
+  color:#6C5EBF;
+  line-height: 2em;
+  opacity: 0.7;
+  font-family: Open Sans;
+  margin-bottom: 40px;
+}
+
+.banner a {
+  background: #3FCF8E;
+  border-radius: 7px;
+  color : white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  padding: 15px 35px;
+  font-weight: 600;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.banner a:hover{
+  text-decoration: none;
+}
+
+.home {
+  margin-right: 120px !important;
+}
+
+.voyage h4{
+  color:#6C5EBF;
+  margin-top: 110px;
+}
+
+h4{
+  color:#6C5EBF;
+}
+
+.explications{
+  height:auto;
+  padding: 20px;
+  margin-top:-60px;
+}
+
+.rea{
+  display: flex;
+  justify-content:center;
+  background-color:white;
+  height:auto;
+  margin:20px;
+}
+
+.photo1{
+
+  height:280px;
+  width: 295px;
+  margin: 20px;
+  background-image: asset-url('travelers.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo2{
+  height: 280px;
+  width: 295px;
+  margin: 20px;
+  background-image: asset-url('adventure.svg');
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+.photo3{
+  height:280px;
+  width:295px;
+  margin: 20px;
+  background-image: asset-url('connected.svg');
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+.explain{
+  height:300px;
+  width: 350px;
+  margin:20px;
+  padding-top: 40px;
+}
+
+.newsletter{
+  width:auto;
+  height: 300px;
+  padding-right: 120px;
+  padding-left: 120px;
+
+}
+
+#mc_embed_signup{
+  border: 2px solid #6C5EBF;
+  border-radius:8px;
+}
+
+.rea a{
+  background-color:#3FCF8E;
+  font-size: bolder;
+  padding:10px;
+  color: white;
+  border-radius: 8px;
+}
+
+
+.validate{
+  position: relative;
+}
+
+.photo-b{
+  height:100px;
+  width: 200px;
+    border-radius: 10px;
+  // box-shadow: 10px 5px 5px black;
+  // box-shadow: inset 0 0 3em white, 0 0 3em white;
+}
+
+.voyage{
+    position: relative;
+    bottom: 56px;
+    text-align: center;
+}
+
+// // Paralax
+// html {
+//     overflow: hidden;
+// }
+// body {
+//     margin: 0;
+//     background-color:white;
+//     font-size: 26px;
+//     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+//     color: #ffffff;
+//     height: 100vh;
+//     perspective: 1px;
+//     transform-style: preserve-3d;
+//     overflow-x:hidden;
+//     overflow-y:auto;
+// }
+// .parallax-wrapper {
+//     width: 400vw;
+//     height: 100%;
+//     padding-top:20vh;
+//     box-sizing: border-box;
+//     transform-style: preserve-3d;
+// }
+
+// .parallax-wrapper::before {
+//     content:"";
+//     width: 100vw;
+//     height: 200vh;
+//     top:0;
+//     left:0;
+//     background-image: url("Wave.jpg");
+//     position: absolute;
+//     z-index: -1;
+//     transform:translateZ(-1px) scale(2);
+// }
+// .regular-wrapper {
+//     width: 100vw;
+//     height:100vh;
+//     padding-top:20vh;
+//     background-color: blue;
+//     // background-image: url("akab.jpg");
+//     z-index: 2;
+//     position: relative;
+// }
+// .content-a {
+//     margin: 0 auto;
+//     padding: 50px;
+//     width: 60%;
+//     background: #57b894;
+// }
+
+// .content-b {
+//     margin: 0 auto;
+//     padding: 50px;
+//     width: 50%;
+//     background: #aaa;
+// }
+
+

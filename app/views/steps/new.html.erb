@@ -1,0 +1,170 @@
+<div class="container-fullscreen">
+  <div class="criteria-slider">
+  <div class="form-container-criteria-slider ">
+    <% if @list_acti_culture_choose == [] && @list_acti_sport_choose == [] && @list_acti_visit_choose == [] && @list_acti_beach_choose == [] %>
+    <h2 class="mb-4 text-center trip-header">Your preferences</h2>
+    <div class="container d-flex justify-content-center">
+      <p> Are you sure about your trip? </p>
+      <%= link_to "New trip", new_trip_path, class: "green-btn" %>
+    </div>
+    <% else %>
+    <!-- <h3 class="text-center trip-header-new ">Choose 2 activities per category</h3> -->
+    <h2 class="mb-4 text-center trip-header">Choose your activities</h2>
+    <div class="tabs-container mt-3">
+      <div class="tab-button">1</div>
+      <hr>
+      <div class="tab-button">2</div>
+      <hr>
+      <div class="tab-button tab-active">3</div>
+      <hr>
+      <div class="tab-button" id="go-button">Go</div>
+    </div>
+    <%= simple_form_for([@trip, @step]) do |f| %>
+    <!-- Inject fixed activities -->
+    <div class="form-group">
+      <% unless @fixed_activities_ids == [] %>
+      <input type="hidden" name="activities_fixed_ids[]" value="<%= @fixed_activities_ids %>">
+      <% end %>
+    </div>
+    <div class="criteria-slider">
+    <% unless @list_acti_culture_choose == [] %>
+      <div class="form-container-criteria-slider">
+        <div class="d-flex justify-content-center">
+          <div class="col-md-8 mt-3">
+            <!-- culture to choose -->
+            <h5 style=" color: #5448ff; margin-left: 17px;">CULTURE - Choose 2 activities</h5>
+            <div class="form-group">
+              <input type="hidden" name="activities_ids[]" value="">
+              <div class="activity-choices">
+                <% @list_acti_culture_choose.each do |acti_culture| %>
+                <div class="card col-sm-5 mb-5 parent-class-culture" style="width: 18rem;">
+                  <input type="checkbox"class="hidden check-culture" value="<%= acti_culture.id %>" name="activities_ids[]" id="step_activity_activity_ids_<%= acti_culture.id %>">
+                  <label for="step_activity_activity_ids_<%= acti_culture.id %>" class="activity-choice acti-culture card-title margin-none pb-2">
+                    <%= image_tag acti_culture.photo, class: "card-img-top" %>
+                    <div class="mt-2"> <%= acti_culture.name %>  </div>
+                  </label>
+                </div>
+                <% end %>
+              </div>
+            </div>
+            <% if @list_acti_sport_choose == [] &&  @list_acti_visit_choose == [] && @list_acti_beach_choose == []%>
+            <div class="mb-4 btn-next d-flex justify-content-center ">
+              <%#= f.button :submit, value: "Discover your trip",class: "btn green-btn-criteria" %>
+              <button type="submit" class="btn green-btn-criteria">Discover your trip</button>
+            </div>
+            <% else %>
+            <div class="mb-4 d-flex justify-content-end">
+              <span class="btn-next green-btn-criteria">
+                Next
+              </span>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <% unless @list_acti_sport_choose == [] %>
+      <div class="form-container-criteria-slider">
+        <div class="d-flex justify-content-center">
+          <div class="col-md-8 mt-3">
+            <!-- SPORT -->
+            <h5 style=" color: #5448ff; margin-left: 17px;">SPORT - Choose 2 activities</h5>
+            <div class="form-group">
+              <input type="hidden" name="activities_ids[]" value="">
+              <div class="activity-choices">
+                <% @list_acti_sport_choose.each do |acti_sport| %>
+                <div class="card col-sm-5 mb-5 parent-class-sport" style="width: 18rem;">
+                  <input type="checkbox"class="hidden check-sport" value="<%= acti_sport.id %>" name="activities_ids[]" id="step_activity_activity_ids_<%= acti_sport.id %>">
+                  <label for="step_activity_activity_ids_<%= acti_sport.id %>" class="activity-choice acti-sport card-title margin-none pb-2">
+                    <%= image_tag acti_sport.photo, class: "card-img-top" %>
+                    <div class="mt-2"> <%= acti_sport.name %>  </div>
+                  </label>
+                </div>
+                <% end %>
+              </div>
+            </div>
+            <% if @list_acti_visit_choose == [] && @list_acti_beach_choose == []%>
+            <div class="mb-4 btn-next d-flex justify-content-center ">
+              <%#= f.button :submit, value: "Discover your trip",class: "btn green-btn-criteria" %>
+              <button type="submit" class="btn green-btn-criteria">Discover your trip</button>
+            </div>
+            <% else %>
+            <div class="mb-4 d-flex justify-content-end">
+              <span class="btn-next green-btn-criteria">
+                Next
+              </span>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <% unless @list_acti_visit_choose == [] %>
+      <div class="form-container-criteria-slider">
+        <div class="d-flex justify-content-center">
+          <div class="col-md-8 mt-3">
+            <!-- VISIT -->
+            <h5 style=" color: #5448ff; margin-left: 17px;">VISIT - Choose 2 activities</h5>
+            <div class="form-group">
+              <input type="hidden" name="activities_ids[]" value="">
+              <div class="activity-choices">
+                <% @list_acti_visit_choose.each do |acti_visit| %>
+                <div class="card col-sm-5 mb-5 parent-class-visit" style="width: 18rem;">
+                  <input type="checkbox"class="hidden check-visit" value="<%= acti_visit.id %>" name="activities_ids[]" id="step_activity_activity_ids_<%= acti_visit.id %>">
+                  <label for="step_activity_activity_ids_<%= acti_visit.id %>" class="activity-choice acti-visit card-title margin-none pb-2">
+                    <%= image_tag acti_visit.photo, class: "card-img-top" %>
+                    <div class="mt-2"> <%= acti_visit.name %>  </div>
+                  </label>
+                </div>
+                <% end %>
+              </div>
+            </div>
+            <% if @list_acti_beach_choose == []%>
+            <div class="mb-4 btn-next d-flex justify-content-center">
+              <%#= f.button :submit, value: "Discover your trip",class: "btn green-btn-criteria" %>
+              <button type="submit" class="btn green-btn-criteria">Discover your trip</button>
+            </div>
+            <% else %>
+            <div class="mb-4 d-flex justify-content-end">
+              <span class="btn-next green-btn-criteria">
+                Next
+              </span>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <% unless @list_acti_beach_choose == [] %>
+      <div class="form-container-criteria-slider">
+        <div class="d-flex justify-content-center">
+          <div class="col-md-8 mt-3">
+            <!-- BEACH -->
+            <h5 style=" color: #5448ff; margin-left: 17px;">BEACH - Choose 2 activities</h5>
+            <div class="form-group">
+              <input type="hidden" name="activities_ids[]" value="">
+              <div class="activity-choices">
+                <% @list_acti_beach_choose.each do |acti_beach| %>
+                <div class="card col-sm-5 mb-5 parent-class-beach" style="width: 18rem;">
+                  <input type="checkbox"class="hidden check-beach" value="<%= acti_beach.id %>" name="activities_ids[]" id="step_activity_activity_ids_<%= acti_beach.id %>">
+                  <label for="step_activity_activity_ids_<%= acti_beach.id %>" class="activity-choice acti-beach card-title margin-none pb-2">
+                    <%= image_tag acti_beach.photo, class: "card-img-top" %>
+                    <div class="mt-2"> <%= acti_beach.name %>  </div>
+                  </label>
+                </div>
+                <% end %>
+              </div>
+            </div>
+            <div class="mb-4 btn-next d-flex justify-content-center">
+              <%#= f.button :submit, value: "Discover your trip",class: "btn green-btn-criteria" %>
+              <button type="submit" class="btn green-btn-criteria">Discover your trip</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      <% end %>  <!-- Fin formulaire -->
+      <% end %>  <!-- Fin condition if list activities not empty -->
+      </div>  <!-- Fin de la page -->
+    </div>
+    </div>

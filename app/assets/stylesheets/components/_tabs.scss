@@ -1,0 +1,38 @@
+.tabs-container{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 3% 20% 0% 20%;
+  // background-color: rgba(142, 187, 239, 0.04);
+}
+.tab-button{
+  font-family: ‘Montserrat’, sans-serif !important;
+  padding: 0.5em 1em;
+  border-radius: 50%;
+  background-color: #81c9ad;
+  // border: 1px solid rgba(87, 184, 148, 0.16);
+  // border: 1px solid #57B894;
+  // color: #86228E;
+  // color: white;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.tab-button p {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+
+}
+#go-button{
+  padding: 1em;
+}
+.tab-active{
+  // background-color: #57B894;
+  background-color: #81c9ad;
+  color: white;
+}
+
+
+.tabs-container > hr {
+  width: 100%;
+}

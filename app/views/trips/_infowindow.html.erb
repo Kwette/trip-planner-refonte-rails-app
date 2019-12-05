@@ -1,0 +1,18 @@
+
+<div>
+  <div style="padding: 10px;">
+    <h6 style ="font-size: 14px; font-weight: 600; margin: 0; color: #454D66;"> <%= step.city.name %> - </i> <% if step.duration > 0 %><%= pluralize(step.duration, 'day') %> <% else %> <%= '< 1 day' %> <% end %></h6>
+    <% if trip.departure_city != step.city %>
+    <p style = "ont-weight: 500;
+    color: #575F75;
+    font-family: 'Raleway', ‘Montserrat’, sans-serif;
+    font-size: 12px;
+    opacity: 1;"><%= step.city.name %> - next step<%#= Step.find_by_order(step.order - 1).city.name %> : <%= (api_step['distance']/1_000).round(2) %> km</p>
+    <% else %>
+    <br>
+    <% end %>
+    <% if infos == true %>
+    <a class= "card-link" href="#<%= step.city.name %>" style="color: #57b894;">View details...</a>
+<% end %>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.go-top {
+    position: fixed;
+    text-decoration: none;
+    font-size: 2.5em;
+    margin: 0;
+    // color: rgba(87, 95, 117, 1);
+    color: #3fcf8e;
+    font-weight: lighter;
+    background-color: transparent;
+
+}
+
+.go-top:hover {
+    font-size: 2.7em;
+    // color: rgba(87, 95, 117, 1);
+    color: #81c9ad;
+    background-color: transparent;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 1.5em; /* Place the button at the bottom of the page */
+  right: 35px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+
+  cursor: pointer; /* Add a mouse pointer on hover */
+
+}

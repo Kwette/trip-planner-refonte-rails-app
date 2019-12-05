@@ -1,0 +1,36 @@
+<div class="container-fullscreen">
+  <h2 class="trip-header text-center pt-6">List of your trips</h2>
+  <div class="trip-index-container">
+    <h5>My trips ( <%= @trips.count %> )</h5>
+    <% @trips.reverse.each do |trip| %>
+    <%= link_to details_trip_path (trip) do%>
+    <div class="card-trip mb-6" id="index-pics">
+      <p class="absolute type-activity index-trip"><%= trip.arrival_city.name %> to <%= trip.departure_city.name %></p>
+      <%= image_tag(trip.steps.first.activities.first.photo) %>
+      <div class="card-trip-infos index-trip index-trip-bottom">
+         <p><%=  trip.end_date.to_formatted_s(:short).to_i - trip.start_date.to_formatted_s(:short).to_i %> Days Trip</p>
+         <div class="d-flex index-trip index-trip-bottom">
+         <p> From <%= trip.start_date.to_formatted_s(:short) %></p>
+         <p class="pl-4"> To <%= trip.end_date.to_formatted_s(:short) %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+<!--
+<div class="mb-10">
+  <% @trips.reverse.each do |trip| %>
+
+  <% trip.steps.each do |step| %>
+      <%= link_to details_trip_path (trip) do%>
+
+  <p>Find a place to stay in <%= step.city.name %></p>
+
+  <% end %>
+  <% end %>
+  <% end %>
+  </div>
+ -->
+
+</div>

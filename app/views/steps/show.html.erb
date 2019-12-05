@@ -1,0 +1,70 @@
+<h3 class="text-center trip-header-new mb-15">Your stay in <%= @step.city.name %></h3>
+<% counter = 0 %>
+<% @step.step_activities.each do |stepactivity| %>
+<% if stepactivity.mistery == true %>
+<div class="trip-index-container col-md-8 px-0 mt-4">
+  <div class="card-trip mb-8">
+    <p class="absolute type-activity text-right pr-2"><i class="fas fa-star mr-1 "></i><%= stepactivity.activity.ranking_interest %> /5</p>
+    <p class="absolute type-activity "><%= stepactivity.activity.activity_types %></p>
+    <%= image_tag 'locked3.png', class: "" %>
+    <div class="card-trip-infos">
+      <div>
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="d-flex align-items-center justify-content-start flex-grow-1">
+            <p class="timeline-details"><%= counter += 1 %></p>
+            <h2 class="ml-2">Mistery activity</h2>
+          </div>
+          <div class="d-flex">
+            <p class="ml-4">
+              <i class="far fa-clock " style="font-weight: bold; text-align: right;"></i>
+            About : <%= stepactivity.activity.duration/60 %>h</p>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+        <% if stepactivity.activity.price > 0 %>
+      <h2 class="card-trip-pricing green"><%= stepactivity.activity.price %>€</h2>
+      <% else %>
+      <h2 class="card-trip-pricing green">Free</h2>
+      <% end %>
+      <!--       <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/> -->
+    </div>
+  </div>
+</div>
+<% else %>
+<div class="trip-index-container col-md-8 px-0 mt-4">
+  <div class="card-trip mb-8">
+    <p class="absolute type-activity text-right pr-2"><i class="fas fa-star mr-1 "></i><%= stepactivity.activity.ranking_interest %> /5</p>
+    <p class="absolute type-activity "><%= stepactivity.activity.activity_types %></p>
+    <%=image_tag(stepactivity.activity.photo) %>
+    <div class="card-trip-infos">
+      <div>
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="d-flex align-items-center justify-content-start flex-grow-1">
+            <p class="timeline-details"><%= counter += 1 %></p>
+            <h2 class="ml-2"><%= stepactivity.activity.name %></h2>
+            <p class="address"><%= stepactivity.activity.address %></p>
+          </div>
+          <div class="d-flex">
+            <p class="ml-4">
+              <i class="far fa-clock " style="font-weight: bold; text-align: right;"></i>
+            About : <%= stepactivity.activity.duration/60 %>h</p>
+          </div>
+          <div>
+          </div>
+        </div>
+        <p class="description"><%= stepactivity.activity.description %></p>
+      </div>
+      <h2 class="card-trip-pricing green">
+      <% if stepactivity.activity.price > 0 %>
+      <%= stepactivity.activity.price %>€</h2>
+      <% else %>
+      <h2 class="card-trip-pricing green">Free</h2>
+      <% end %>
+      <!--       <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/> -->
+    </div>
+  </div>
+</div>
+<% end %>
+<% end %>

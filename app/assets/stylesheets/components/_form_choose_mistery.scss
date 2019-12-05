@@ -1,0 +1,46 @@
+.parent-class-mistery{
+  width: 100%;
+  height: 100%;
+}
+
+
+mistery-choices {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.mistery-choices input[type="checkbox"] {
+    opacity: 0;
+    display: contents;
+}
+.mistery-choices-row-three {
+    display: flex;
+    justify-content: space-between;
+}
+.mistery-choices-row-two {
+   display: flex;
+    //justify-content: space-around;
+    position: relative;
+}
+.card-between-cards{
+  left: 203px;
+}
+.imposed-width{
+  width: 225px !important ;
+}
+.fix-button-position{
+  position: relative;
+}
+.btn-position{
+  position: absolute;
+  left: 459px;
+}
+.padding-none{
+  padding: 0px;
+}
+.card-mistery img{
+  height: 70%;
+  object-fit: cover;
+  width: 100%;
+}

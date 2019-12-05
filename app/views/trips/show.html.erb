@@ -1,0 +1,44 @@
+
+<h2 class="trip-header text-center">Our proposition</h2>
+<div class="tabs-container">
+  <div class="tab-button">1</div>
+  <hr>
+  <div class="tab-button">2</div>
+  <hr>
+  <div class="tab-button">3</div>
+  <hr>
+  <div class="tab-button">4</div>
+  <hr>
+  <div class="tab-button tab-active" id="go-button">Go</div>
+</div>
+<div class="container" style = "margin: auto; height: 75vh;">
+  <div class="d-flex mt-4 justify-content-around">
+    <div class="steps">
+
+      <h3 class="trip-header"><i class="fas fa-map-marked-alt"></i> Your Trip</h3>
+      <br>
+      <p> <i class="fas fa-hourglass-half"></i>  <%= @trip.start_date.strftime("%m-%d")%> <strong>until</strong> <%= @trip.end_date.strftime("%m-%d-%Y") %></p>
+      <p> <i class="fas fa-suitcase-rolling"></i>   <%= @trip.arrival_city.name %> <i class="fas fa-arrow-right"></i>  <%= @trip.departure_city.name %></p>
+
+      <h3 class="trip-header-green"><i class="fas fa-clipboard-check"></i> Your choices</h3>
+      <br>
+      <p><i class="fas fa-umbrella-beach"></i> Beach <i class="fas fa-arrow-right"></i> <%= @trip.criteria["beach"] %></p>
+      <p><i class="fas fa-walking"></i> Visit <i class="fas fa-arrow-right"></i> <%= @trip.criteria["visit"] %></p>
+      <p><i class="fas fa-chess-queen"></i> Culture <i class="fas fa-arrow-right"></i> <%= @trip.criteria["culture"] %></p>
+      <p><i class="fas fa-volleyball-ball"></i> Sport <i class="fas fa-arrow-right"></i> <%= @trip.criteria["sport"] %></p>
+    </div>
+<!--     <div class = "steps step-map">
+     <h5><i class="fab fa-leanpub"></i> Your itinerary</h5>-->       <div
+        id="map"
+        style="width: 100%;
+        height: 70vh;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
+        </div>
+      <%= link_to "Go to Trip Details", details_trip_path(@trip) , class: "green-btn absolute", id: "but-absolute"%>
+  </div>
+</div>
+<div class="test">  </div>
+
+

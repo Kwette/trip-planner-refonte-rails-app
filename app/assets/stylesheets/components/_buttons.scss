@@ -1,0 +1,93 @@
+.green-btn {
+  // background-color: rgba(90, 184, 148, 0.85);
+  background-color: #81c9ad;
+  border-radius: 8px;
+  color : white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding: 0.5em 1.5em;
+  font-weight: bold;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+  // transition: all 0.4s ease;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.green-btn:hover{
+  text-decoration: none;
+  color: white;
+  background-color: rgba(90, 184, 148, 1);
+  border: none;
+  font-size: 16px;
+  // transition: all 0.4s ease;
+}
+.sign-in-btn{
+  width: 50%;
+  margin: auto;
+}
+.green-btn-criteria {
+  letter-spacing: 0.1em;
+  background: #81c9ad;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding: 0.5em 1.5em;
+  font-weight: bold;
+  margin: 1em 0em 0em 1em;
+  transition: all 0.4s ease;
+}
+
+.green-btn-criteria:hover{
+  text-decoration: none;
+  color: white;
+  background-color: rgba(90, 184, 148, 1);
+  border: none;
+  font-size: 16px;
+}
+
+a:hover {
+  text-decoration: none;
+  color:  #707070;
+  background-color: inherit;
+  font-size: 16px;
+  border-bottom: 2px solid #81c9ad;
+  // border-radius: 5em;
+  transition: all 0.4s ease;
+}
+
+.form-shared-links a {
+    font-family: Montserrat;
+    text-decoration: none;
+    color: #3FCF8E;
+    font-size: 20px;
+    // border: 1px solid #57B894;
+    padding: 8px;
+    border-radius: 8px;
+    // text-align: center;
+    font-size: 16px;
+    transition: all 0.5s ease;
+    line-height: 3em;
+}
+
+.form-shared-links a:hover {
+    border: 1px solid #3FCF8E;
+    color: #3FCF8E;
+    transition: all 0.5s ease;
+    padding: 0.7em;
+}
+.position-next{
+  position: relative;
+}
+.right-side-btn{
+  position: absolute;
+  right: 20px;
+}
+.right-side-btn-criteria{
+  position: absolute !important;
+  right: 410px;
+}
+
+
+
